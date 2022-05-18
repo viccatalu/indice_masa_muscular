@@ -1,0 +1,26 @@
+<!--segura_Munoz_MariaVictoria_LMSGI03_TareaEvaluativa01-->
+<?xml version="1.0"  encoding ="utf-8"?>
+<rss version ="2.0">
+ <channel>
+<!-- los documentos rss se  componen de elementos variables 
+    y no variables en este paso no variables que son el titulo y la descripción-->
+    <title> mi canal rss </title>
+    <link> https://calculadoraimc-a8ddc.web.app/</link>
+    <description> noticias de salud y bienestar </description>
+    <lenguaje> es</lenguaje>
+<!-- la etiquetta item siempre debe de estar dentro de chanel
+     el item tiene tres etiquetas como minímo titulo, enlace, descripción-->
+    <item>
+        <title> Noticias de asalud y bienestar</title>
+        <link> https://comersanoyeconomico.wordpress.com/</link>
+        <description>Comer sano y fácil, recetas, salud, rutinas</description>
+       <!--guid es opcional-->
+    </item>
+    <item> 
+        <title> revistas de recetas</title>
+        <link>https://www.eroski.es/inspirate/recetas/todas-las-recetas/</link>
+        <description> Recetas super saludables con semaforo nutricional</description>
+    </item>
+ </channel>   
+</rss>
+<!-- se valida a travez de w3c-->

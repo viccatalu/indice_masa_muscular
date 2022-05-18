@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name ="descripcion" content="vic_caluladora_IMM"/>
+		<title>ÍNDICE DE MASA CORPORAL</title>
+		<link  rel="stylesheet" href="css/estilos.css">
+	</head>
+		<body>
+            
+			<header>
+			<img  class="logo "src ="img/LOGO1.png" alt= "LOGO HERBLF"width="900" height="500" />
+			
+				<h1><i>CONOZCA AQUÍ SU ÍNDICE DE MASA CORPORAL</i></h1>	
+			<!--video-->
+			</header>
+
+			<nav>
+			<video  class ="vid" controls autoplay muted loop>
+			<!--controles standar html5 autoplay para que se reproduzca y ademas en silencio-->
+			<source src="img/formula1-1.mp4" type="video/mp4" >
+			</video>
+			</nav>
+
+			<article>
+			
+				<section>
+							<script type="text/javascript">
+									//definimos la funcion
+									function calculaIMC()
+									{
+									//declaramos las variables
+								var peso, altura, imc, leyenda;
+								//hacemos la llamada a los datos introducidos
+									peso=document.getElementById("peso").value;
+									altura=document.getElementById("altura").value/100;
+								//calculamos el imc
+									imc=peso/(altura*altura);
+								//enviamos el resultado a la caja correspondiente y lo reducimos a 2 decimales
+									document.getElementById("imc").value=imc.toFixed(2);
+								//mediante if comparamos el resultado para determinar si es correcto el peso
+								if(imc<=18.4)
+									{
+									//determinamos el defecto en peso y definimos el comentario
+									leyenda="Debajo del peso normal"+ (altura*altura*20.5-peso).toFixed(1) + " kilos";
+									}
+									else if(imc >=18.5 && imc < 25){
+										leyenda="Peso normal";
+									}
+									else if (imc >=25 && imc < 29){
+										leyenda="Sobrepeso"+(peso-altura*altura*25.5).toFixed(1) +" kilos";
+									}
+									else if (imc >=30){
+										leyenda="Obesidad";
+									}
+								//determinamos el exceso en peso y definimos el comentario
+								
+								//enviamos el comentario a la caja correspondiente
+								document.getElementById("leyenda").value=leyenda;
+									}
+							</script>
+								<form  class= "form1"name="f1" id="f1" action="">
+									<fieldset>
+										<legend> CALCULADORA IMC (INDICE DE MASA CORPORAL)</legend>
+										<p>Peso en Kg: 
+											<input type="text"name="peso" id="peso" size="3" maxlength="4">
+										</P>
+										<p>Altura en cm. : 
+											<input type="text"name="altura" id="altura" size="3" maxlength="4">	
+											<input type="button" value="Calcular IMC" onclick="calculaIMC() ">
+										</p>
+										<p>IMC :
+											<input type="text"name="imc" id="imc" size="10" maxlength="15">
+											leyenda:
+											<input type="text"name="leyenda" id="leyenda" size="42">
+										</p>
+										<img  class="manzana "src ="img/manzana.jpg" alt= "manzana"width="500" height="150" />
+									</fieldset>
+								</form>
+				</section>
+			</article>
+		
+				<aside>
+					<table caption="imc">
+						<tr>
+							<th>INDICE DE MASA CORPORAL </th></br>
+							<th>ESTADO </th>
+						</tr>
+						<tr >
+						<td bgcolor="#18ffff">Por debajo de 18.5</td></br>
+						<td bgcolor="#18ffff">Debajo del peso normal</td> </br>
+						</tr>
+						<tr >
+						<td bgcolor="#64dd17"> De 18.5 a 24.99</td>
+						<td bgcolor="#64dd17">Peso normal</td>
+						</tr>
+						<tr >
+						<td bgcolor="#ff9100">De 25 hasta 29.99</td> </br>º 
+						<td bgcolor="#ff9100">Sobrepeso </td>
+						</tr>
+						<tr >
+						<td bgcolor="#ff6d00"> 30 o más</td>
+						<td bgcolor="#ff6d00">Obesidad</td>
+						</tr>	
+					</table>
+				</aside>
+		    <article>
+				<section>
+				
+					<h2><i>Información programa de control de peso consultenos aquí</i></h2>
+					<form action="mailto:vicvicherbalifenutrition@gmail.com" method="POST">
+						<label > NOMBRE APELLIDO: </label>
+						<input type= "text"  name="nombre">
+						<label >CORREO ELÉCTRONICO: </label>
+						<input type= "email" name="coreo">
+						<label >TELÉFONO: </label>
+						<input type= "number"name="telefono"><br>
+						
+						<fieldset>
+						<legend >SELECIONE SU PROGRAMA: </legend>
+						<select name="programa" id="programa">
+						<option value="ctrlpeso"> BAJAR DE PESO</option>
+						<option value="sbirpeso"> SUBIR DE PESO</option>
+						<option value="mantener"> MANTENER EL PESO</option>
+						<input type="submit"value="enviar">
+						</select>
+						</fieldset>
+					</form>
+				</section>	
+		    </article>
+		    <footer>
+				<div>
+					<a href="RSS\rss.xml">Mi canal RSS</a>
+				</div>
+			</footer>
+					
+		</body>
+	
+
+</html>
